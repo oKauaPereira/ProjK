@@ -48,7 +48,7 @@ Exemplo de resposta:
 
 ---
 
-## 📸 Screenshots
+## 📸 Imagens
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/98b84db8-9730-4a94-a675-a0a55686f978" width="300"/>
