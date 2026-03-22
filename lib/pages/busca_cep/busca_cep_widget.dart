@@ -68,70 +68,146 @@ class _BuscaCepWidgetState extends State<BuscaCepWidget> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                width: 100.0,
-                height: 320.15,
+                width: 0.0,
+                height: 266.8,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).accent2,
+                  color: Color(0x0039D2C0),
                 ),
-                child: Container(
-                  width: 200.0,
-                  height: 200.0,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.network(
-                    'https://media.discordapp.net/attachments/1183493376381825075/1483319092717944842/3B0C42D8-4199-47E4-80B0-AFD4539380B8.png?ex=69c0bf8e&is=69bf6e0e&hm=0240d91eccb0bf80649829dd7553182284b7d74f1ac4e3ad6c69379380f75d23&=&format=webp&quality=lossless',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).accent2,
-                ),
-                child: Stack(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    Align(
-                      alignment: AlignmentDirectional(-0.01, -0.18),
-                      child: Text(
-                        'Kauã Pereira',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.inter(
-                                fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              fontSize: 20.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
+                    Expanded(
+                      child: Align(
+                        alignment: AlignmentDirectional(0.0, 0.0),
+                        child: Container(
+                          width: 130.0,
+                          height: 130.0,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image.network(
+                            'https://media.discordapp.net/attachments/1183493376381825075/1483319092717944842/3B0C42D8-4199-47E4-80B0-AFD4539380B8.png?ex=69c0bf8e&is=69bf6e0e&hm=0240d91eccb0bf80649829dd7553182284b7d74f1ac4e3ad6c69379380f75d23&=&format=webp&quality=lossless',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(-0.01, -0.18),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                10.0, 44.0, 10.0, 0.0),
+                            child: Text(
+                              'Kauã Pereira',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    font: GoogleFonts.inter(
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 20.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed(GrupoWidget.routeName);
-                },
-                child: Material(
-                  color: Colors.transparent,
-                  child: ListTile(
-                    title: Text(
-                      'Grupo',
-                      style: FlutterFlowTheme.of(context).titleLarge.override(
-                            font: GoogleFonts.interTight(
+              Padding(
+                padding: EdgeInsets.all(6.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed(GrupoWidget.routeName);
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.groups,
+                      ),
+                      title: Text(
+                        'Grupo',
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              font: GoogleFonts.interTight(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
+                              letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .fontStyle,
+                              lineHeight: 1.0,
+                            ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      tileColor: Color(0x3157636C),
+                      dense: false,
+                      contentPadding:
+                          EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24.0),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(6.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed(BuscaCepWidget.routeName);
+                  },
+                  child: Material(
+                    color: Colors.transparent,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.manage_search,
+                      ),
+                      title: Text(
+                        'BuscaCep',
+                        style: FlutterFlowTheme.of(context).titleLarge.override(
+                              font: GoogleFonts.interTight(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .fontStyle,
+                              ),
+                              letterSpacing: 0.0,
                               fontWeight: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .fontWeight,
@@ -139,109 +215,20 @@ class _BuscaCepWidgetState extends State<BuscaCepWidget> {
                                   .titleLarge
                                   .fontStyle,
                             ),
-                            letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontStyle,
-                          ),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
+                      ),
+                      tileColor: Color(0x3657636C),
+                      dense: false,
+                      contentPadding:
+                          EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24.0),
+                      ),
                     ),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
-                    ),
-                    tileColor: Color(0x6E57636C),
-                    dense: false,
-                    contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed(BuscaCepWidget.routeName);
-                },
-                child: Material(
-                  color: Colors.transparent,
-                  child: ListTile(
-                    title: Text(
-                      'BuscaCep',
-                      style: FlutterFlowTheme.of(context).titleLarge.override(
-                            font: GoogleFonts.interTight(
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .fontStyle,
-                            ),
-                            letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontStyle,
-                          ),
-                    ),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
-                    ),
-                    tileColor: Color(0x6657636C),
-                    dense: false,
-                    contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                  ),
-                ),
-              ),
-              Material(
-                color: Colors.transparent,
-                child: ListTile(
-                  title: Text(
-                    'Title',
-                    style: FlutterFlowTheme.of(context).titleLarge.override(
-                          font: GoogleFonts.interTight(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleLarge
-                                .fontStyle,
-                          ),
-                          letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .titleLarge
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).titleLarge.fontStyle,
-                        ),
-                  ),
-                  trailing: Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: FlutterFlowTheme.of(context).secondaryText,
-                    size: 24.0,
-                  ),
-                  tileColor: Color(0x6257636C),
-                  dense: false,
-                  contentPadding:
-                      EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
               ),
